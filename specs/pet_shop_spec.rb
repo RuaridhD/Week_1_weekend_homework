@@ -126,11 +126,11 @@ class TestPetShop < Minitest::Test
     assert_nil(pet)
   end
 
-  # def test_remove_pet_by_name
-  #   remove_pet_by_name(@pet_shop, "Arthur")
-  #   pet = find_pet_by_name(@pet_shop,"Arthur")
-  #   assert_nil(pet)
-  # end
+  def test_remove_pet_by_name
+    remove_pet_by_name(@pet_shop, "Arthur")
+    pet = find_pet_by_name(@pet_shop,"Arthur")
+    assert_nil(pet)
+  end
 
   def test_add_pet_to_stock
     add_pet_to_stock(@pet_shop, @new_pet)
@@ -167,13 +167,13 @@ class TestPetShop < Minitest::Test
   # #If one fails the entire test should fail
   # def test_sell_pet_to_customer__pet_found
   #   customer = @customers[0]
-  #   pet = find_pet_by_name(@pet_shop,"Arthur")
-
-  #   sell_pet_to_customer(@pet_shop, pet, customer)
-
-  #   assert_equal(1, customer_pet_count(customer))
-  #   assert_equal(1, pets_sold(@pet_shop))
-  #   assert_equal(1900, total_cash(@pet_shop))
+  #   pet = find_pet_by_name(@pet_shop,"Arthur") #find pet Arthur
+  #
+  #   sell_pet_to_customer(@pet_shop, pet, customer) #Sell pet to Upul
+  #
+  #   assert_equal(1, customer_pet_count(customer)) #Upul pet count 1
+  #   assert_equal(1, pets_sold(@pet_shop)) #pet shop, pets, admin, pets sold
+  #   assert_equal(1900, total_cash(@pet_shop))#move pet price to pet shop, pets, admin, total cash
   # end
 
   # def test_sell_pet_to_customer__pet_not_found
